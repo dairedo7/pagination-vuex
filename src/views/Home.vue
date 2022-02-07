@@ -6,11 +6,11 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
-import postsList from "../components/get-posts.vue";
+import { mapActions, mapGetters } from 'vuex';
+import postsList from '../components/get-posts.vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     postsList,
   },
@@ -18,10 +18,10 @@ export default {
     return {};
   },
   computed: {
-    ...mapGetters(["POSTS"]),
+    ...mapGetters(['POSTS']),
   },
   methods: {
-    ...mapActions(["GET_POSTS_FROM_API"]),
+    ...mapActions(['GET_POSTS_FROM_API']),
   },
 
   mounted() {

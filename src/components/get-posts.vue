@@ -9,29 +9,17 @@
             <p class="post__body" v-if="!readMore[post.id]">
               {{ post.body.slice(0, 120) }}
 
-              <button
-                @click="showMore(post.id)"
-                v-if="!readMore[post.id]"
-                class="btn readMoreBtn"
-              >
+              <button @click="showMore(post.id)" v-if="!readMore[post.id]" class="btn readMoreBtn">
                 Show more
               </button>
             </p>
-            <button
-              @click="removeBtn(post.id)"
-              class="btn post__remove-btn"
-              type="button"
-            >
+            <button @click="removeBtn(post.id)" class="btn post__remove-btn" type="button">
               Remove
             </button>
             <p class="more" v-if="readMore[post.id]">
               {{ post.body }}
             </p>
-            <button
-              @click="showLess(post.id)"
-              v-if="readMore[post.id]"
-              class="btn readMoreBtn"
-            >
+            <button @click="showLess(post.id)" v-if="readMore[post.id]" class="btn readMoreBtn">
               Show less
             </button>
           </li>
@@ -71,7 +59,7 @@
 
 <script>
 export default {
-  name: "postsList",
+  name: 'postsList',
   props: {
     posts_data: {
       type: Array,
@@ -106,7 +94,7 @@ export default {
       return posts.slice(from, to);
     },
     removeBtn(id) {
-      let index = this.posts_data.map((item) => item.id).indexOf(id);
+      let index = this.posts_data.map(item => item.id).indexOf(id);
       this.posts_data.splice(index, 1);
     },
     showMore(id) {
@@ -197,8 +185,7 @@ a {
     &:hover,
     &:focus {
       border: outset;
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-        rgba(0, 0, 0, 0.22) 0px 10px 10px;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     }
   }
 }

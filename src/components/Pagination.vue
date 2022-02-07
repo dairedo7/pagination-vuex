@@ -1,11 +1,6 @@
 <template>
   <div class="clearfix btn-group col-md-2 offset-md-5">
-    <button
-      type="button"
-      class="btn btn-sm btn-outline-warning"
-      v-if="page != 1"
-      @click="page--"
-    >
+    <button type="button" class="btn btn-sm btn-outline-warning" v-if="page != 1" @click="page--">
       Previous
     </button>
     <button
