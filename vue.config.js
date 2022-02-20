@@ -1,3 +1,5 @@
 module.exports = {
-    publicPath: '/Post-list-assignment/'
+    publicPath: process.env.NODE_ENV === 'production'
+        ? '/Post-list-assignment/'
+        : '/'
 }
