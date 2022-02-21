@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">The Post Storage</router-link> |
+      <router-link to="/">The Post Storage Vuex</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view />
